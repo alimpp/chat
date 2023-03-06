@@ -4,7 +4,9 @@ export const application_path = {
   GET: {
     MESSAGES : "/chatbot"
   },
-  POST: {},
+  POST: {
+    SEND_MESSAGE : "/chatbot"
+  },
   PUT: {},
   DELETE: {},
 };

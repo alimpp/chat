@@ -28,7 +28,6 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .base-card-container {
-  width: 100%;
   transition: 1s;
   border-radius: 5px;
   margin: 10px 0;

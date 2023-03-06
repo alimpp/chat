@@ -99,6 +99,9 @@ const props = defineProps({
     z-index: 1;
     margin: 7px 6px;
   }
+  input{
+    height: 37px;
+  }
   .error {
     border: 1px solid #ff4d4f;
   }

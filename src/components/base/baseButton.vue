@@ -132,7 +132,7 @@ const props = defineProps({
 <style lang="scss" scoped>
 .button {
   width: 80px;
-  height: 28px;
+  height: 35px;
   padding: 5px;
   border: none;
   border-radius: 5px;

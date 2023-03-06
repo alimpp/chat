@@ -3,8 +3,15 @@
     <div class="chat-room-header">
       <chatRoomHeader />
     </div>
-    <div class="messages px-4">
-     {{ dataSource }}
+    <div class="messages px-4 py-2">
+      <chatCard
+        v-for="data in dataSource"
+        :key="data.id"
+        :id="data.id"
+        :name="data.name"
+        :role="data.role"
+        :message="data.message"
+      />
     </div>
     <div class="chat-room-footer">
       <chatRoomFooter />
@@ -17,17 +24,18 @@ import { computed, watch, onMounted, ref } from "vue";
 import chatRoomHeader from "@/layout/base/chatRoomHeader";
 import chatRoomFooter from "@/layout/base/chatRoomFooter";
 import { chatDataStore } from "@/stores/chatDataStore";
-import {allMessages} from "@/api/chatApi"
+import { allMessages } from "@/api/chatApi";
+import chatCard from "@/components/card/chatCard";
 
 const chatDataStoreModule = chatDataStore();
 
 const dataSource = computed(() => {
-  return chatDataStoreModule.messages
-})
+  return chatDataStoreModule.messages;
+});
 
 onMounted(() => {
-  allMessages()
-})
+  allMessages();
+});
 </script>
 
 <style scoped lang="scss">
@@ -40,12 +48,12 @@ onMounted(() => {
     height: 10vh;
   }
   .messages {
-    height: 83vh;
+    height: 90vh;
     overflow-x: hidden;
     overflow-y: scroll;
   }
   .chat-room-footer {
-    height: 7vh;
+    height: 10vh;
   }
 }
 </style>

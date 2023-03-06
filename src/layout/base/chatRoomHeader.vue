@@ -36,7 +36,7 @@ const watchTheme = computed(() => {
 
 <style lang="scss" scoped>
 .chat-room-header {
-  width: 95%;
+  width: 96%;
   height: 10vh;
   border-radius: 0 0 10px 10px;
   img {

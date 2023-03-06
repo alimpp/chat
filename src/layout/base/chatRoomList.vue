@@ -6,7 +6,7 @@
       chat_room_list_light_mode_theme: watchTheme === 'light',
     }"
   >
-    <baseInput placeholder="Search Room..." icon="username" />
+    <span class="size_m primary_color">Chat Rooms</span>
     <roomCard :name="roomList.name" :image="roomList.image" :text="roomList.text" />
   </div>
 </template>

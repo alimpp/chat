@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { application_base_url , application_path } from '@/services/applicationPath'
 import {chatDataStore} from '@/stores/chatDataStore'
-import { ErrorNotification } from '@/services/applicationNotification'
+import { ErrorNotification, SuccessNotification } from '@/services/applicationNotification'
 
 const chatDataStoreModule = chatDataStore()
 
@@ -11,6 +11,34 @@ export const allMessages = async () => {
         chatDataStoreModule.messages = res.data
     })
     .catch(()=> {
+        ErrorNotification(3000,'Your network is low please try again and check network and check json server','bottom-center')
+    })
+}
+
+export const SendMessage = async (param: string) => {
+    await axios.post(`${application_base_url}${application_path.POST.SEND_MESSAGE}` , {
+        role : "user" ,
+        name : "Jhon Doe" , 
+        message : param
+    })
+    .then(() => {
+        SuccessNotification(2000, 'Message Sended','top-center')
+    })
+    .catch(() => {
+        ErrorNotification(3000,'Your network is low please try again and check network and check json server','bottom-center')
+    })
+}
+
+export const BotMessage = async () => {
+    await axios.post(`${application_base_url}${application_path.POST.SEND_MESSAGE}` , {
+        role : "bot" ,
+        name : "Chat Bot" , 
+        message : "Thanks for message...!"
+    })
+    .then(() => {
+        SuccessNotification(2000, 'You have new message','top-center')
+    })
+    .catch(() => {
         ErrorNotification(3000,'Your network is low please try again and check network and check json server','bottom-center')
     })
 }
