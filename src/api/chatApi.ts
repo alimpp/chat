@@ -22,7 +22,9 @@ export const SendMessage = async (param: string) => {
         message : param
     })
     .then(() => {
-        SuccessNotification(2000, 'Message Sended','top-center')
+        setTimeout(() => {
+            SuccessNotification(1000, 'Message Sended','top-center')
+        } , 1000)
     })
     .catch(() => {
         ErrorNotification(3000,'Your network is low please try again and check network and check json server','bottom-center')
@@ -36,7 +38,7 @@ export const BotMessage = async () => {
         message : "Thanks for message...!"
     })
     .then(() => {
-        SuccessNotification(2000, 'You have new message','top-center')
+        SuccessNotification(3000, 'You Have New Message','top-center')
     })
     .catch(() => {
         ErrorNotification(3000,'Your network is low please try again and check network and check json server','bottom-center')

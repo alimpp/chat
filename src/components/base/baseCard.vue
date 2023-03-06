@@ -32,5 +32,6 @@ const props = defineProps({
   border-radius: 5px;
   margin: 10px 0;
   overflow: hidden;
+  box-shadow: 1px 1px 1px 1px rgba(104, 82, 228, 0.37);
 }
 </style>

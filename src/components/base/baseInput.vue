@@ -97,7 +97,7 @@ const props = defineProps({
     font-size: 12px;
     position: absolute;
     z-index: 1;
-    margin: 7px 6px;
+    margin: 10px 6px;
   }
   input{
     height: 37px;

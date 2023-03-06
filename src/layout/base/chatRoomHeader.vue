@@ -39,6 +39,7 @@ const watchTheme = computed(() => {
   width: 96%;
   height: 10vh;
   border-radius: 0 0 10px 10px;
+  box-shadow: 1px 1px 1px 1px rgba(104, 82, 228, 0.37);
   img {
     width: 50px;
     height: 50px;

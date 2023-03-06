@@ -23,20 +23,21 @@ import baseInput from "@/components/base/baseInput";
 import baseButton from "@/components/base/baseButton";
 import { SendMessage } from "@/api/chatApi";
 import { BotMessage } from "@/api/chatApi";
+import { allMessages } from "@/api/chatApi";
 
 const message = ref("");
 
 const sendMessage = () => {
   if (message.value === "") {
-    ErrorNotification(2000, "Message can not empty", "bottom-center");
+    ErrorNotification(2000, "Please Type Message", "bottom-center");
   } else {
     SendMessage(message.value);
+    allMessages();
+    message.value = ''
     setTimeout(() => {
       BotMessage();
-    } , 1000)
-    setTimeout(() => {
-      location.reload()
-    }, 2000);
+      allMessages();
+    }, 3000);
   }
 };
 </script>
