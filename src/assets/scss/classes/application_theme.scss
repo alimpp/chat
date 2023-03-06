@@ -1,0 +1,45 @@
+@import '../variables/themeColors';
+
+.application_dark_mode_theme{
+    background-color: var(--application-dark-mode);
+    color: var(--light-);
+    transition: 0.3s;
+}
+.application_light_mode_theme{
+    background-color: var(--application-light-mode);
+    color: var(--dark-);
+    transition: 0.3s;
+}
+
+.chat_room_list_dark_mode_theme{
+    background-color: var(--chat-room-list-dark-mode);
+    color: var(--light-);
+    transition: 0.3s;
+}
+.chat_room_list_light_mode_theme{
+    background-color: var(--chat-room-list-light-mode);
+    color: var(--dark-);
+    transition: 0.3s;
+}
+
+.base_card_light_mode_theme{
+    background-color: var(--base-card-light-mode);
+    color: var(--gary-);
+    transition: 0.3s;
+}
+.base_card_dark_mode_theme{
+    background-color: var(--base-card-dark-mode);
+    color: var(--light-);
+    transition: 0.3s;
+}
+
+.chat_room_header_light_mode_theme{
+    background-color: var(--chat-room-header-light-mode);
+    color: var(--gary-);
+    transition: 0.3s;
+}
+.chat_room_header_dark_mode_theme{
+    background-color: var( --chat-room-header-dark-mode);
+    color: var(--light-);
+    transition: 0.3s;
+}

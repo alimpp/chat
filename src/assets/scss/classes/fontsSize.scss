@@ -1,0 +1,41 @@
+@import "../variables/fontSize.scss";
+
+.size_v_s {
+  font-size: $--size-very-small;
+  font-weight: 100;
+}
+
+.size_s {
+  font-size: $--size-small;
+  font-weight: 100;
+}
+
+.size_v_me {
+  font-size: $--size-very-medium;
+  font-weight: 100;
+}
+
+.size_m {
+  font-size: $--size-medium;
+  font-weight: 100;
+}
+
+.size_v_l {
+  font-size: $--size-very-large;
+}
+
+.size_l {
+  font-size: $--size-large;
+}
+
+.size_2xl {
+  font-size: $--size-2xl;
+}
+
+.size_3xl {
+  font-size: $--size-3xl;
+}
+
+.size_4xl {
+  font-size: $--size-4xl;
+}

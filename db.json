@@ -1,0 +1,22 @@
+{
+     "chatbot" : [
+        {
+            "id" : 0 , 
+            "role" : "bot" , 
+            "name" : "Chat Bot" , 
+            "message" : "Hello i am chat bot"
+        } ,
+        {
+            "id" : 1 , 
+            "role" : "user" , 
+            "name" : "Jhon Doe" , 
+            "message" : "Hello chat bot"
+        } ,
+        {
+            "id" : 2 , 
+            "role" : "bot" , 
+            "name" : "Chat Bot" , 
+            "message" : "Thanks for message...!"
+        } 
+     ]
+}
